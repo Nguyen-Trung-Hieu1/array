@@ -8,7 +8,6 @@ private:
     int soLuong;
     int sucChua;
 
-    // tăng kích thước khi đầy
     void moRong()
     {
         sucChua *= 2;
@@ -25,7 +24,7 @@ private:
     }
 
 public:
-    // khởi tạo
+    
     MangDong()
     {
         sucChua = 5;
@@ -33,13 +32,13 @@ public:
         duLieu = new int[sucChua];
     }
 
-    // huỷ
+    
     ~MangDong()
     {
         delete[] duLieu;
     }
 
-    // thêm cuối
+    
     void themCuoi(int giaTri)
     {
         if (soLuong == sucChua)
@@ -51,7 +50,7 @@ public:
         soLuong++;
     }
 
-    // thêm đầu
+    
     void themDau(int giaTri)
     {
         if (soLuong == sucChua)
@@ -68,7 +67,7 @@ public:
         soLuong++;
     }
 
-    // chèn vào vị trí
+    
     void chen(int viTri, int giaTri)
     {
         if (viTri < 0 || viTri > soLuong)
@@ -91,7 +90,6 @@ public:
         soLuong++;
     }
 
-    // xoá theo vị trí
     void xoaTai(int viTri)
     {
         if (viTri < 0 || viTri >= soLuong)
@@ -108,7 +106,6 @@ public:
         soLuong--;
     }
 
-    // xoá cuối
     void xoaCuoi()
     {
         if (soLuong == 0)
@@ -120,7 +117,6 @@ public:
         soLuong--;
     }
 
-    // tìm giá trị
     int tim(int giaTri)
     {
         for (int i = 0; i < soLuong; i++)
@@ -133,7 +129,6 @@ public:
         return -1;
     }
 
-    // lấy giá trị
     int lay(int viTri)
     {
         if (viTri < 0 || viTri >= soLuong)
@@ -144,7 +139,6 @@ public:
         return duLieu[viTri];
     }
 
-    // sửa giá trị
     void gan(int viTri, int giaTri)
     {
         if (viTri < 0 || viTri >= soLuong)
@@ -155,31 +149,26 @@ public:
         duLieu[viTri] = giaTri;
     }
 
-    // số phần tử
     int laySoLuong()
     {
         return soLuong;
     }
 
-    // sức chứa
     int laySucChua()
     {
         return sucChua;
     }
 
-    // rỗng hay không
     bool rong()
     {
         return soLuong == 0;
     }
 
-    // xoá hết
     void xoaHet()
     {
         soLuong = 0;
     }
 
-    // in mảng
     void in()
     {
         cout << "Mang: ";
