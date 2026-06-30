@@ -189,30 +189,17 @@ int main()
     arr.themCuoi(10);
     arr.themCuoi(20);
     arr.themCuoi(30);
-
     arr.in();
-
     arr.themDau(5);
-
     arr.in();
-
     arr.chen(2, 100);
-
     arr.in();
-
     arr.xoaTai(1);
-
     arr.in();
-
     arr.xoaCuoi();
-
     arr.in();
-
     cout << "Tim 100 tai vi tri: " << arr.tim(100) << endl;
-
     cout << "So luong: " << arr.laySoLuong() << endl;
-
     cout << "Suc chua: " << arr.laySucChua() << endl;
-
     return 0;
 }
