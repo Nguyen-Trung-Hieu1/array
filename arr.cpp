@@ -90,24 +90,22 @@ public:
         soLuong++;
     }
 
-    void xoaTai(int viTri)
-    {
+    void xoaTai(int viTri){
+    
         if (viTri < 0 || viTri >= soLuong)
         {
             cout << "Vi tri khong hop le\n";
             return;
         }
-
         for (int i = viTri; i < soLuong - 1; i++)
         {
             duLieu[i] = duLieu[i + 1];
         }
-
         soLuong--;
     }
 
-    void xoaCuoi()
-    {
+    void xoaCuoi(){
+    
         if (soLuong == 0)
         {
             cout << "Mang rong\n";
@@ -117,8 +115,8 @@ public:
         soLuong--;
     }
 
-    int tim(int giaTri)
-    {
+    int tim(int giaTri){
+    
         for (int i = 0; i < soLuong; i++)
         {
             if (duLieu[i] == giaTri)
@@ -129,8 +127,7 @@ public:
         return -1;
     }
 
-    int lay(int viTri)
-    {
+    int lay(int viTri){
         if (viTri < 0 || viTri >= soLuong)
         {
             return -1;
