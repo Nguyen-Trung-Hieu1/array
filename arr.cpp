@@ -8,8 +8,7 @@ private:
     int soLuong;
     int sucChua;
 
-    void moRong()
-    {
+    void moRong(){
         sucChua *= 2;
 
         int* moi = new int[sucChua];
@@ -24,23 +23,19 @@ private:
     }
 
 public:
-    
-    MangDong()
-    {
+    MangDong(){
         sucChua = 5;
         soLuong = 0;
         duLieu = new int[sucChua];
     }
 
     
-    ~MangDong()
-    {
+    ~MangDong(){
         delete[] duLieu;
     }
 
     
-    void themCuoi(int giaTri)
-    {
+    void themCuoi(int giaTri){
         if (soLuong == sucChua)
         {
             moRong();
@@ -50,9 +45,7 @@ public:
         soLuong++;
     }
 
-    
-    void themDau(int giaTri)
-    {
+    void themDau(int giaTri){
         if (soLuong == sucChua)
         {
             moRong();
@@ -66,10 +59,8 @@ public:
         duLieu[0] = giaTri;
         soLuong++;
     }
-
     
-    void chen(int viTri, int giaTri)
-    {
+    void chen(int viTri, int giaTri){
         if (viTri < 0 || viTri > soLuong)
         {
             cout << "Vi tri khong hop le\n";
