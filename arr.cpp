@@ -125,7 +125,7 @@ bool CustomVector<T>::is_empty() const {
 template <typename T>
 T CustomVector<T>::at(size_t index) const {
     if (index >= current_size) {
-        throw out_of_range("Loi: Chi muc vuot qua gioi han cua mang!");
+        throw out_of_range("");
     }
     return *(arr_ptr + index); 
 }
@@ -142,7 +142,7 @@ void CustomVector<T>::push(T item) {
 template <typename T>
 void CustomVector<T>::insert(size_t index, T item) {
     if (index > current_size) {
-        throw out_of_range("Loi: Vi tri chen khong hop le!");
+        throw out_of_range("");
     }
     if (current_size == max_capacity) {
         resize(max_capacity * 2);
