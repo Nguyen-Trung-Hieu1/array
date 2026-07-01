@@ -67,15 +67,15 @@ CustomVector<T>::CustomVector(const CustomVector& other) {
 }
 
 template <typename T>
-CustomVector<T>::CustomVector(CustomVector&& other) noexcept {
-    arr_ptr = other.arr_ptr;
-    current_size = other.current_size;
-    max_capacity = other.max_capacity;
+    CustomVector<T>::CustomVector(CustomVector&& other) noexcept {
+        arr_ptr = other.arr_ptr;
+        current_size = other.current_size;
+        max_capacity = other.max_capacity;
 
-    other.arr_ptr = nullptr;
-    other.current_size = 0;
-    other.max_capacity = 0;
-}
+        other.arr_ptr = nullptr;
+        other.current_size = 0;
+        other.max_capacity = 0;
+    }
 
 template <typename T>
 void CustomVector<T>::assign_copy(const CustomVector<T>& other) {
@@ -162,7 +162,7 @@ void CustomVector<T>::prepend(T item) {
 template <typename T>
 T CustomVector<T>::pop() {
     if (is_empty()) {
-        throw underflow_error("Loi: Mang rong, khong the pop!");
+        throw underflow_error("");
     }
     T last_item = *(arr_ptr + (current_size - 1)); 
     current_size--;
@@ -176,7 +176,7 @@ T CustomVector<T>::pop() {
 template <typename T>
 void CustomVector<T>::delete_at(size_t index) {
     if (index >= current_size) {
-        throw out_of_range("Loi: Chi muc can xoa khong hop le!");
+        throw out_of_range("");
     }
     for (size_t i = index; i < current_size - 1; ++i) {
         *(arr_ptr + i) = move(*(arr_ptr + (i + 1)));
